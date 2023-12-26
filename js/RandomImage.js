@@ -1,3 +1,5 @@
+var image = document.getElementById('image');
+
 const imageLocations = 
 [
     "img/white_logo.png",
@@ -14,7 +16,6 @@ const imageLocations =
 function ChangeImageRandomly() 
 {
     let randomFlip = Math.floor(Math.random() * imageLocations.length + 1);
-    var image = document.getElementById('image');
     switch (randomFlip) 
     {
         case 1:
@@ -47,4 +48,35 @@ function ChangeImageRandomly()
     }
 }
 
-ChangeImageRandomly();
+function ShouldRandomImage() 
+{
+    switch (Math.floor(Math.random() * 6)) 
+    {
+        case 0:
+            ChangeImageRandomly();
+            break;
+        case 1:
+            image.src = imageLocations[0];
+            break;
+        case 2:
+            image.src = imageLocations[0];
+            break;
+        case 3:
+            image.src = imageLocations[0];
+            break;
+        case 4:
+            image.src = imageLocations[0];
+            break;
+        case 5:
+            image.src = imageLocations[0];
+            break;
+        case 6:
+            image.src = imageLocations[0];
+            break;
+        default:
+            image.src = imageLocations[0];
+            break;
+    }
+}
+
+ShouldRandomImage();
